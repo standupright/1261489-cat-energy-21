@@ -1,8 +1,16 @@
+.advantages {
+  .container(mobile);
+}
+
 .advantages__item {
   background-color: @basic-grey;
+  margin-top: 22px;
+  padding-bottom: 18px;
 }
 
 .advantages__title {
+  margin: 0;
+  padding-top: 30px;
   font-family: "Oswald","Arial",sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -10,14 +18,22 @@
   line-height: 37px;
   color: @black;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .advantages__list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .advantages__description {
+  display: block;
+  margin-left: 20px;
+  margin-top: 29px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid @dark-grey;
+  width: 227px;
   font-family: "Arial",sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -27,6 +43,9 @@
 }
 
 .advantages__button {
+  display: block;
+  margin-top: 15px;
+  margin-left: 20px;
   font-family: "Oswald","Arial",sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -34,4 +53,84 @@
   line-height: 16px;
   color: @black;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    .container(tablet);
+  }
+
+  .advantages__item {
+    margin: 0;
+    padding-bottom: 53px;
+  }
+
+  .advantages__item:last-of-type {
+    margin-top: 30px;
+  }
+
+  .advantages__title {
+    font-size: 36px;
+    margin-left: 53px;
+    line-height: 36px;
+    text-align: left;
+    padding-top: 77px;
+  }
+
+  .advantages__description {
+    color: @black;
+    width: 377px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 53px;
+    border: 0;
+    padding:0;
+  }
+  .advantages__description:last-of-type{
+    width: 342px;
+  }
+
+  .advantages__button {
+    margin-left: 53px;
+    margin-top: 52px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages {
+    .container(desktop);
+  }
+
+  .advantages__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .advantages__item {
+    width: 570px;
+    margin-top: 82px;
+    padding-bottom: 59px;
+  }
+
+  .advantages__item:last-of-type {
+    margin-top: 82px;
+  }
+
+  .advantages__title {
+    margin-left: 214px;
+  }
+
+  .advantages__description {
+    margin-top: 73px;
+    width: 467px;
+  }
+
+  .advantages__description:last-of-type{
+    width: 457px;
+  }
+
+  .advantages__button {
+    margin-left: 52px;
+    margin-top: 23px;
+  }
 }
