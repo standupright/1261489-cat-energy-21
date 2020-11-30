@@ -1,4 +1,5 @@
 .live-expenses__name {
+  margin:0;
   font-family: "Oswald","Arial",sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -8,10 +9,19 @@
 }
 
 .live-expenses__cost {
+  margin: 0;
   font-family: "Oswald","Arial",sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .live-expenses__name,
+  .live-expenses__cost {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
