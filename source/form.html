@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -91,16 +92,16 @@
           </ul>
 
           <div class="main-form__contacts contacts">
-            <b class="main-form__title">Контактные данные(владельца кота)</b>
+            <b class="contacts__title">Контактные данные(владельца кота)</b>
 
             <div class="contacts__inner">
-                <label for="email"></label>
-                <input id="email" name="email" type="email" placeholder="kuklachev@gmail.com">
+                <label class="contacts__label" for="email"></label>
+                <input class="contacts__input" id="email" name="email" type="email" placeholder="kuklachev@gmail.com">
             </div>
 
             <div class="contacts__inner">
-                <label for="phone"></label>
-                <input id="phone" type="tel" name="phone"
+                <label class="contacts__label" for="phone"></label>
+                <input class="contacts__input" id="phone" type="tel" name="phone"
                 placeholder="8 (960) 900-60-90"
                 pattern="[8]{1}([0-9]{3})-[0-9]{3}-[0-9]{2}-[0-9]{2}"
                 required>
@@ -115,7 +116,7 @@
           </div>
 
           <div class="main-form__additionally-info additionally-info">
-
+            <b class="additionally-info__title">Дополнительно</b>
             <ul class="additionally-info__list">
                 <li class="additionally-info__item additionally-item">
                     <input class="additionally-item__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
@@ -148,7 +149,7 @@
     <h2 class="visually-hidden">Как нас найти</h2>
     <div class="page-footer__map map">
         <div class="map__wrapper">
-          <div class="map__inner map-plate">
+          <div class="map__inner map-plate map-plate--color">
             <b class="map-plate__slogan">Приглашаем к сотрудничеству дилеров!</b>
             <address class="map-plate__address">
               ул. Большая
@@ -177,8 +178,8 @@
         </li>
       </ul>
 
-      <div class="page-footer__developers">
-        <img src="#" alt="HTML Academy">
+      <div class="page-footer__developers developers">
+        <p class="developers__name">HTML Academy</p>
         <img src="#" alt="Логотип HTML Academy">
       </div>
 
