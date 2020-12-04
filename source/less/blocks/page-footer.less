@@ -1,3 +1,22 @@
 .page-footer {
   background-color: @basic-grey;
 }
+
+.page-footer__map,
+.page-footer__wrapper {
+  .container(mobile);
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__map,
+  .page-footer__wrapper {
+    .container(tablet);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__map,
+  .page-footer__wrapper {
+    .container(desktop);
+  }
+}
