@@ -1,18 +1,83 @@
 .contacts__title {
-  font-family: "Oswald","Arial",sans-serif;
+  display: block;
+  margin: 0;
+  margin-bottom: 21px;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
 }
 
-.contacts_input,
+.contacts__inner {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  width: 280px;
+}
+
 .contacts__label {
-  font-family: "Oswald","Arial",sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: @special-dark-grey;
+}
+
+.contacts__input {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @special-dark-grey;
+  border: 1px solid @light-grey-additional;
+  box-sizing: border-box;
+  flex-grow: 1;
+  margin-left: 12px;
+  padding-left: 13px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  &::placeholder {
+    text-transform: uppercase;
+    color: @special-dark-grey;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__title {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 56px;
+  }
+
+  .contacts__inner {
+    width: 632px;
+    margin-top: 20px;
+  }
+
+  .contacts__label,
+  .contacts__input {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .contacts__wrapper {
+    display: flex;
+  }
+
+  .contacts__inner {
+    width: 570px;
+  }
+
+  .contacts__inner:last-of-type {
+    margin-left: 78px;
+  }
 }

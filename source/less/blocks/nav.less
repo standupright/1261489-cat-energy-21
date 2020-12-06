@@ -9,7 +9,7 @@
   width: 18px;
   height: 18px;
   border: 0;
-  background-image: url("/img/nav__toggle-icon.svg");
+  background-image: url("/img/icon-toggle.svg");
   background-color: @white;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,7 +18,7 @@
 .nav__list {
   list-style: none;
   padding: 0;
-  margin:0;
+  margin: 0;
 }
 
 .nav__item {
@@ -29,10 +29,10 @@
   border-top: 1px solid @light-grey-additional;
 }
 
-.nav__item a {
+.nav__link {
   display: block;
   text-align: center;
-  font-family: "Oswald","Arial",sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -46,6 +46,7 @@
     width: 440px;
     margin-top: 42px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
@@ -56,9 +57,13 @@
     width: max-content;
   }
 
-  .nav__item a {
+  .nav__link {
     font-size: 18px;
     line-height: 24px;
+
+    &--on-white-background {
+      color: @black;
+    }
   }
 
   .nav__toggle {
@@ -67,9 +72,17 @@
 }
 
 @media (min-width: @desktop-width) {
-  .nav__item a {
+  .nav__list {
+    width: 483px;
+  }
+
+  .nav__link {
     font-size: 20px;
     line-height: 30px;
     color: @white;
+
+    &--on-white-background {
+      color: @black;
+    }
   }
 }

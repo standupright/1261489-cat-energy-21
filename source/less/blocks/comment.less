@@ -1,5 +1,6 @@
 .comment__title {
-  font-family: "Oswald","Arial",sans-serif;
+  margin: 0;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -7,7 +8,13 @@
 }
 
 .comment__text-area {
-  font-family: "Oswald","Arial",sans-serif;
+  display: block;
+  margin-top: 42px;
+  width: 280px;
+  height: 145px;
+  padding-top: 5px;
+  padding-left: 15px;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -15,4 +22,26 @@
   text-transform: uppercase;
   color: @special-dark-grey;
   resize: none;
+  border: 1px solid @light-grey-additional;
+}
+
+@media (min-width: @tablet-width) {
+  .comment__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .comment__text-area {
+    height: 164px;
+    margin-top: 76px;
+    padding-top: 10px;
+    padding-left: 19px;
+    width: 611px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .comment__text-area {
+    width: 1201px;
+  }
 }
