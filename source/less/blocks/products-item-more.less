@@ -1,3 +1,21 @@
+.products-item-more {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    bottom: 0;
+    left: -20px;
+    position: absolute;
+    width: 320px;
+    height: 1px;
+    background-color: @special-gray;
+  }
+}
+
 .products-item-more__title {
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -5,6 +23,8 @@
   font-size: 16px;
   line-height: 20px;
   color: @special-black;
+  margin-top: 23px;
+  text-transform: uppercase;
 }
 
 .products-item-more__description {
@@ -15,6 +35,7 @@
   line-height: 16px;
   padding: 0;
   margin-top: 8px;
+  margin-bottom: 21px;
 }
 
 .products-item-more__button-all-products {
@@ -22,7 +43,8 @@
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: @basic-grey;
+  margin-bottom: 25px;
+  background-color: @basic-gray;
   text-align: center;
   text-transform: uppercase;
   font-family: "Oswald", "Arial", sans-serif;
@@ -30,5 +52,76 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  color: @special-dark-grey;
+  color: @special-dark-gray;
+}
+
+.products-item-more__button-more-one-product {
+  margin-top: 25px;
+  width: 60px;
+  height: 60px;
+  background-color: @white;
+  border: 0;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background-color: @gray-additional;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .products-item-more {
+    border: 2px solid @basic-gray;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .products-item-more__title {
+    font-size: 20px;
+    line-height: 22px;
+    display: block;
+    width: 134px;
+    text-align: center;
+    margin-top: 49px;
+  }
+
+  .products-item-more__description {
+    display: block;
+    text-align: center;
+    width: 167px;
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 87px;
+    margin-top: 23px;
+  }
+
+  .products-item-more__button-all-products {
+    padding: 10px 0;
+    width: 250px;
+    margin-bottom: 38px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .products-item-more__button-all-products {
+    width: 248px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .products-item-more__button-all-products {
+    width: 168px;
+  }
 }

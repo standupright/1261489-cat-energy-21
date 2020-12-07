@@ -2,7 +2,6 @@
   background-color: @basic-green;
   width: 100%;
   min-height: 280px;
-  margin-top: 39px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -20,4 +19,17 @@
   line-height: 20px;
   color: @white;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .present {
+    min-height: 200px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .present {
+    width: 245px;
+    min-height: 289px;
+  }
 }
