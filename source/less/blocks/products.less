@@ -1,4 +1,34 @@
 .products__list {
   list-style: none;
   padding: 0;
+  margin: 0;
+}
+
+.products__item {
+  margin-top: 8px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .products__list {
+    margin-top: 83px;
+    display: grid;
+    grid-template-columns: 324px 324px;
+    column-gap: 60px;
+    row-gap: 140px;
+  }
+
+  .products__item {
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .products__list {
+    margin-top: 84px;
+    display: grid;
+    grid-template-columns: 245px 245px 245px 245px;
+    column-gap: 80px;
+    row-gap: 144px;
+  }
 }
