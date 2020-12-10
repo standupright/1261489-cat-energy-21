@@ -1,5 +1,9 @@
 .cat-info__title {
-  font-family: "Oswald","Arial",sans-serif;
+  display: block;
+  margin-bottom: 26px;
+  margin-top: 37px;
+  width: 226px;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -7,9 +11,15 @@
   text-transform: uppercase;
 }
 
+.cat-info__inner {
+  margin-top: 13px;
+  display: flex;
+  align-items: center;
+}
+
 .cat-info__input,
 .cat-info__label {
-  font-family: "Oswald","Arial",sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -19,6 +29,35 @@
 }
 
 .cat-info__input {
+  margin-left: 13px;
+  padding-left: 15px;
+  height: 45px;
+  flex-grow: 1;
   border: 1px solid @light-grey-additional;
   box-sizing: border-box;
+}
+
+@media (min-width: @tablet-width) {
+  .cat-info__title {
+    width: 323px;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 46px;
+  }
+
+  .cat-info__inner {
+    margin-top: 20px;
+  }
+
+  .cat-info__input,
+  .cat-info__label {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .cat-info__wrapper {
+    width: 570px;
+  }
 }

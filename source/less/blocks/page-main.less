@@ -1,0 +1,35 @@
+.page-main__form-title,
+.page-main__form-wrapper {
+  .container(mobile);
+}
+
+
+@media (min-width: @tablet-width) {
+  .page-main__form-title {
+    .container(tablet);
+    display: block;
+    width: 630px;
+    padding-left: 71px;
+    padding-right: 67px;
+    margin-top: 65px;
+  }
+
+  .page-main__form-wrapper {
+    .container(tablet);
+    width: 630px;
+    padding-left: 71px;
+    padding-right: 67px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .page-main__form-title {
+    .container(desktop);
+    margin-top: 77px;
+  }
+
+  .page-main__form-wrapper {
+    .container(desktop);
+  }
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -25,17 +26,17 @@
 
       <ul class="nav__list">
         <li class="nav__item nav__item--active">
-          <a href="index.html">
+          <a class="nav__link nav__link--on-white-background" href="index.html">
             Главная
           </a>
         </li>
         <li class="nav__item">
-          <a href="catalog.html">
+          <a class="nav__link nav__link--on-white-background" href="catalog.html">
             Каталог продукции
           </a>
         </li>
         <li class="nav__item">
-          <a href="form.html">
+          <a class="nav__link nav__link--on-white-background" href="form.html">
             Подбор программы
           </a>
         </li>
@@ -46,17 +47,16 @@
   <main class="page-main">
     <h1 class="page-main__form-title main-title">Подбор программы</h1>
 
-    <section class="main-form">
-      <div class="main-form__wrapper">
+    <section class="page-main__form-wrapper main-form">
+      <h2 class="visually-hidden">Анкета для заполнения</h2>
 
-        <h2 class="visually-hidden">Анкета для заполнения</h2>
+      <form method="get" action="https://echo.htmlacademy.ru" target="_blank">
 
-        <form method="get" action="https://echo.htmlacademy.ru" target="_blank">
-
-          <div class="main-form__сat-info cat-info">
+        <div class="main-form__info-cat-wrapper cat-info">
+          <div class="cat-info__wrapper">
             <p class="cat-info__title">
-                Заполните анкету, и мы подберем
-                программу питания для вашего кота
+              Заполните анкету, и мы подберем
+              программу питания для вашего кота
             </p>
             <div class="cat-info__inner">
               <label class="cat-info__label" for="cat-name">Имя:*</label>
@@ -72,94 +72,94 @@
               <label class="cat-info__label" for="cat-age">Возраст (лет):</label>
               <input class="cat-info__input" id="cat-age" name="cat-age" type="number" placeholder="7">
             </div>
-
           </div>
 
           <ul class="main-form__weight-change weight-change-list">
-              <li class="weight-change-list__item">
-                <input id="slimming" name="weight-change" type="radio">
-                <label for="slimming">Похудение</label>
-              </li>
+            <li class="weight-change-list__item">
+              <input class="weight-change-list__radio visually-hidden" id="slimming" name="weight-change" type="radio" checked>
+              <label class="weight-change-list__label" for="slimming">Похудение</label>
+            </li>
 
-              <li class="weight-change-list__item">
-                <input id="weight gain" name="weight-change" type="radio">
-                <label for="weight gain">Набор массы</label>
-              </li>
+            <li class="weight-change-list__item">
+              <input class="weight-change-list__radio visually-hidden" id="weight gain" name="weight-change" type="radio">
+              <label class="weight-change-list__label" for="weight gain">Набор массы</label>
+            </li>
 
-              <li class="weight-change-list__item">
-                <input id="dont-know" name="weight-change" type="radio">
-                <label for="dont-know">Не знаю (нужен ваш совет)</label>
-              </li>
+            <li class="weight-change-list__item">
+              <input class="weight-change-list__radio visually-hidden" id="dont-know" name="weight-change" type="radio">
+              <label class="weight-change-list__label" for="dont-know">Не знаю (нужен ваш совет)</label>
+            </li>
           </ul>
+        </div>
 
-          <div class="main-form__contacts contacts">
-            <b class="contacts__title">Контактные данные(владельца кота)</b>
+        <div class="main-form__contacts contacts">
+          <b class="contacts__title">Контактные данные (владельца кота)</b>
+          <div class="contacts__wrapper">
+            <div class="contacts__inner">
+              <label class="contacts__label" for="email">e-mail:*</label>
+              <input class="contacts__input" id="email" name="email" type="email" placeholder="kuklachev@gmail.com">
+            </div>
 
             <div class="contacts__inner">
-                <label class="contacts__label" for="email"></label>
-                <input class="contacts__input" id="email" name="email" type="email" placeholder="kuklachev@gmail.com">
-            </div>
-
-            <div class="contacts__inner">
-                <label class="contacts__label" for="phone"></label>
-                <input class="contacts__input" id="phone" type="tel" name="phone"
-                placeholder="8 (960) 900-60-90"
-                pattern="[8]{1}([0-9]{3})-[0-9]{3}-[0-9]{2}-[0-9]{2}"
-                required>
+              <label class="contacts__label" for="phone">Телефон:*</label>
+              <input class="contacts__input" id="phone" type="tel" name="phone" placeholder="8 (960) 900-60-90"
+                pattern="[8]{1}([0-9]{3})-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
             </div>
           </div>
+        </div>
 
-          <div class="main-form__comment comment">
-            <b class="comment__title">Комментарий</b>
+        <div class="main-form__comment comment">
+          <b class="comment__title">Комментарий</b>
 
-            <textarea class="comment__text-area" name="comment" placeholder="Рассскажите обо всех повадках кота"></textarea>
+          <textarea class="comment__text-area" name="comment"
+            placeholder="Рассскажите обо всех повадках кота"></textarea>
 
+        </div>
+
+        <div class="main-form__additionally-info additionally-info">
+          <b class="additionally-info__title">Дополнительно</b>
+          <ul class="additionally-info__list">
+            <li class="additionally-info__item additionally-item">
+              <input class="additionally-item__checkbox visually-hidden" type="checkbox" name="sweetener" id="sweetener" checked>
+              <label class="additionally-item__label" for="sweetener">Сахарозаменитель</label>
+            </li>
+            <li class="additionally-info__item additionally-item">
+              <input class="additionally-item__checkbox visually-hidden" type="checkbox" name="drinking-water" id="drinking-water">
+              <label class="additionally-item__label" for="drinking-water">Питьевая вода</label>
+            </li>
+            <li class="additionally-info__item additionally-item">
+              <input class="additionally-item__checkbox visually-hidden" type="checkbox" name="milk" id="milk">
+              <label class="additionally-item__label" for="milk">Молоко</label>
+            </li>
+            <li class="additionally-info__item additionally-item">
+              <input class="additionally-item__checkbox visually-hidden" type="checkbox" name="vitamins" id="vitamins">
+              <label class="additionally-item__label" for="vitamins">Витамины</label>
+            </li>
+          </ul>
+          <div class="additionally-info__inner">
+            <button class="additionally-info__button" type="submit">Отправить заявку</button>
+            <p class="additionally-info__required-fields">*&mdash;Обязательные поля</p>
           </div>
+        </div>
+      </form>
 
-          <div class="main-form__additionally-info additionally-info">
-            <b class="additionally-info__title">Дополнительно</b>
-            <ul class="additionally-info__list">
-                <li class="additionally-info__item additionally-item">
-                    <input class="additionally-item__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
-                    <label class="additionally-item__label" for="sweetener">Сахарозаменитель</label>
-                </li>
-                <li class="additionally-info__item additionally-item">
-                    <input class="additionally-item__checkbox" type="checkbox" name="drinking-water" id="drinking-water">
-                    <label class="additionally-item__label" for="drinking-water">Питьевая вода</label>
-                </li>
-                <li class="additionally-info__item additionally-item">
-                    <input class="additionally-item__checkbox" type="checkbox" name="milk" id="milk">
-                    <label class="additionally-item__label" for="milk">Молоко</label>
-                </li>
-                <li class="additionally-info__item additionally-item">
-                    <input class="additionally-item__checkbox" type="checkbox" name="vitamins" id="vitamins">
-                    <label class="additionally-item__label" for="vitamins">Витамины</label>
-                </li>
-            </ul>
-            <div class="additionally-info__inner">
-                <button class="additionally-info__button" type="submit">Отправить заявку</button>
-                <p class="additionally-info__required-fields">*&mdash;Обязательные поля</p>
-            </div>
-          </div>
-        </form>
-      </div>
     </section>
   </main>
 
   <footer class="page-footer">
     <h2 class="visually-hidden">Как нас найти</h2>
     <div class="page-footer__map map">
-        <div class="map__wrapper">
-          <div class="map__inner map-plate map-plate--color">
-            <b class="map-plate__slogan">Приглашаем к сотрудничеству дилеров!</b>
-            <address class="map-plate__address">
-              ул. Большая
-              Конюшенная, д. 19/8
-              Санкт-Петербург
-            </address>
-          </div>
-          <!-- Место забронировано под карту -->
+      <div class="map__wrapper">
+        <div class="map__inner map-plate map-plate--color">
+          <b class="map-plate__slogan">Приглашаем к сотрудничеству дилеров!</b>
+          <address class="map-plate__address">
+            ул. Большая
+            Конюшенная, д. 19/8
+            Санкт-Петербург
+          </address>
         </div>
+        <!-- Место забронировано под карту -->
+      </div>
     </div>
 
     <div class="page-footer__wrapper">

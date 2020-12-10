@@ -1,5 +1,7 @@
 .additionally-info__title {
-  font-family: "Oswald","Arial",sans-serif;
+  display: block;
+  margin-bottom: 14px;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -9,10 +11,22 @@
 .additionally-info__list {
   list-style: none;
   padding: 0;
+  margin: 0;
+}
+
+.additionally-info__item {
+  margin-top: 25px;
+  margin-left: 46px;
+}
+
+.additionally-info__inner {
+  margin-top: 21px;
+  text-align: center;
 }
 
 .additionally-info__button {
-  font-family: "Oswald","Arial",sans-serif;
+  margin-top: 41px;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -24,13 +38,66 @@
   width: 100%;
   padding: 7px 0;
   outline: none;
+  border: 0;
   background-color: @basic-green;
 }
 
 .additionally-info__required-fields {
-  font-family: "Arial",sans-serif;
+  font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .additionally-info__title {
+    margin-bottom: 20px;
+  }
+
+  .additionally-info__list {
+    display: grid;
+    grid-template-columns: 344px 324px;
+  }
+
+  .additionally-info__item {
+    margin-top: 42px;
+    margin-left: 45px;
+  }
+
+  .additionally-info__button {
+    width: 282px;
+    padding: 13px 0;
+    font-size: 20px;
+    line-height: 26px;
+    margin-top: 0;
+  }
+
+  .additionally-info__inner {
+    display: flex;
+    align-items: center;
+    margin-top: 59px;
+  }
+
+  .additionally-info__required-fields {
+    font-size: 16px;
+    line-height: 16px;
+    margin-left: 61px;
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additionally-info__list {
+    display: grid;
+    grid-template-columns: 325px 325px 325px 325px;
+  }
+
+  .additionally-info__button {
+    width: 568px;
+  }
+
+  .additionally-info__required-fields {
+    margin-left: 81px;
+  }
 }
