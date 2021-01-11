@@ -53,6 +53,15 @@
   font-size: 16px;
   line-height: 20px;
   color: @special-dark-gray;
+
+  &:hover,
+  &:focus {
+    background-color: @special-gray-extra;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .products-item-more__button-more-one-product {
@@ -62,6 +71,7 @@
   background-color: @white;
   border: 0;
   position: relative;
+  outline: none;
 
   &::before,
   &::after {

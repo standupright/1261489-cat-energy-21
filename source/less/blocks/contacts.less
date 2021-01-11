@@ -1,7 +1,7 @@
 .contacts__title {
   display: block;
   margin: 0;
-  margin-bottom: 21px;
+  padding-bottom: 21px;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -14,6 +14,7 @@
   display: flex;
   align-items: center;
   width: 280px;
+  position: relative;
 }
 
 .contacts__label {
@@ -48,11 +49,48 @@
   }
 }
 
+.contacts__icon-message,
+.contacts__icon-phone {
+  position: absolute;
+  right: 16px;
+}
+
+.contacts__icon-message {
+  stroke: @black;
+}
+
+.contacts__input:disabled {
+  background-color: inherit;
+  border: 2px solid @special-dark-gray;
+}
+
+.contacts__input:invalid:not(:empty) {
+  background-color: inherit;
+  border: 2px solid @status-error;
+}
+
+.contacts__input:disabled + .contacts__icon-message {
+  stroke: @basic-green;
+}
+
+.contacts__input:disabled + .contacts__icon-phone {
+  fill: @basic-green;
+}
+
+.contacts__input:invalid:not(:empty) + .contacts__icon-message {
+  stroke: @status-error;
+}
+
+.contacts__input:invalid:not(:empty) + .contacts__icon-phone {
+  fill: @status-error;
+}
+
+
 @media (min-width: @tablet-width) {
   .contacts__title {
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 56px;
+    padding-bottom: 56px;
   }
 
   .contacts__inner {
@@ -64,6 +102,19 @@
   .contacts__input {
     font-size: 20px;
     line-height: 30px;
+  }
+
+
+  .contacts__icon-message {
+    right: 20px;
+    width: 18px;
+    height: 13px;
+  }
+
+  .contacts__icon-phone {
+    right: 20px;
+    width: 20px;
+    height: 20px;
   }
 }
 

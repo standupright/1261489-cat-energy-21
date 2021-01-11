@@ -18,7 +18,7 @@
   min-width: 140px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .products-item__inner {
@@ -41,6 +41,15 @@
   line-height: 20px;
   color: @white;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: @basic-green-additional;
+  }
+
+  &:active {
+    color: @white-opacity;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -85,5 +94,9 @@
 @media (min-width: @desktop-width) {
   .products-item__button {
     width: 168px;
+  }
+
+  .products-item__picture-wrapper {
+    width: 245px;
   }
 }

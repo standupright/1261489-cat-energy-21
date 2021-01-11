@@ -3,9 +3,9 @@
 }
 
 .weight-change-list__item {
-  width: 280px;
-  margin-left: 66px;
-  margin-top: 25px;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 25px;
 }
 
 .weight-change-list__label {
@@ -45,10 +45,15 @@
 }
 
 
+.weight-change-list__radio:disabled + .weight-change-list__label {
+    opacity: 0.3;
+}
+
+
 @media (min-width: @tablet-width) {
   .weight-change-list__item {
-    margin-left: 87px;
-    margin-top: 23px;
+    padding-left: 87px;
+    padding-top: 23px;
   }
 
   .weight-change-list__label {
@@ -74,7 +79,4 @@
 }
 
 @media (min-width: @desktop-width) {
-  .weight-change-list__item {
-    margin-left: 88px;
-  }
 }
