@@ -1,8 +1,43 @@
+.developers__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 22px;
+  padding-bottom: 22px;
+
+  &:hover,
+  &:focus {
+    .developers__icon {
+      fill: @basic-green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .developers__name {
+  display: block;
+  width: 114px;
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   color: @special-dark-gray;
+  padding: 0;
+  margin: 0;
+}
+
+.developers__icon {
+  fill: @brown;
+}
+
+@media (min-width: @tablet-width) {
+  .developers__link {
+    padding: 0;
+    height: 34px;
+    width: 163px;
+  }
 }

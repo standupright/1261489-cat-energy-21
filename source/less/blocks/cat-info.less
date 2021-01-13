@@ -1,7 +1,8 @@
 .cat-info__title {
   display: block;
-  margin-bottom: 26px;
-  margin-top: 37px;
+  margin:0;
+  padding-bottom: 26px;
+  padding-top: 37px;
   width: 226px;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -12,7 +13,7 @@
 }
 
 .cat-info__inner {
-  margin-top: 13px;
+  padding-top: 13px;
   display: flex;
   align-items: center;
 }
@@ -31,10 +32,24 @@
 .cat-info__input {
   margin-left: 13px;
   padding-left: 15px;
+  padding-right: 15px;
   height: 45px;
   flex-grow: 1;
   border: 1px solid @light-gray-additional;
   box-sizing: border-box;
+
+  &:hover {
+    border: 1px solid @special-gray;
+  }
+
+  &:focus {
+    border-radius: 0px;
+    border: 2px solid @special-dark-gray;
+  }
+
+  &:invalid:not(:empty) {
+    border: 2px solid @status-error;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -42,17 +57,19 @@
     width: 323px;
     font-size: 20px;
     line-height: 30px;
-    margin-bottom: 46px;
+    padding-bottom: 46px;
   }
 
   .cat-info__inner {
-    margin-top: 20px;
+    padding-top: 20px;
   }
 
   .cat-info__input,
   .cat-info__label {
     font-size: 20px;
     line-height: 30px;
+    padding-top: 11px;
+    padding-bottom: 11px;
   }
 }
 

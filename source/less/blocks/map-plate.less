@@ -2,7 +2,7 @@
   background-color: @white;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 22px;
+  padding: 28px 0;
 
   &--color {
     background-color: @basic-gray;
@@ -11,7 +11,6 @@
 
 .map-plate__slogan {
   display: block;
-  margin-top: 28px;
   width: 140px;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -24,7 +23,6 @@
 
 .map-plate__address {
   display: block;
-  margin-top: 28px;
   width: 140px;
   font-family: "Arial", sans-serif;
   font-style: normal;
@@ -32,4 +30,39 @@
   font-size: 14px;
   line-height: 20px;
   color: @special-dark-gray;
+}
+
+@media (min-width: @tablet-width) {
+
+  .map-plate {
+    padding: 62px 42px 51px 41px;
+  }
+
+  .map-plate__slogan {
+    font-size: 20px;
+    line-height: 21px;
+    width: 170px;
+  }
+
+  .map-plate__address {
+    text-align: right;
+    font-size: 16px;
+    line-height: 20px;
+    width: 160px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+  .map-plate {
+    padding: 66px 76px 51px 76px;
+
+    &--color {
+      background-color: @white;
+    }
+  }
+
+  .map-plate__address {
+    text-align: left;
+  }
 }

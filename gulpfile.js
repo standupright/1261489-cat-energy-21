@@ -5,7 +5,7 @@ const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
-
+const webp = require("gulp-webp");
 // Styles
 
 const styles = () => {
@@ -23,6 +23,14 @@ const styles = () => {
 
 exports.styles = styles;
 
+// Webp Converter
+const createWebp = () => {
+  return gulp.src("source/img/*.{jpg,png}")
+  .pipe(webp({quality: 75}))
+  .pipe(gulp.dest("source/img"))
+}
+
+exports.createWebp = createWebp;
 // Server
 
 const server = (done) => {

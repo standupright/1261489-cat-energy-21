@@ -2,6 +2,15 @@
   //background-color: @basic-green; //временно, для отладки
   min-height: 480px;
   .container(mobile);
+  position: relative;
+  background-color: @white;
+  background-image: url("../img/main-cat.jpg");
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/main-cat@2x.jpg");
+    background-size: 320px auto;
+  }
 }
 
 .promo__title {
@@ -29,9 +38,16 @@
   color: @white;
 }
 
+.promo__picture {
+  position: absolute;
+  top: 167px;
+}
+
 .promo__button {
+  width: 100%;
   display: block;
-  margin-top: 302px;
+  margin-top: 305px;
+  margin-bottom: 0;
   text-align: center;
   padding: 7px 0;
   font-family: "Oswald", "Arial", sans-serif;
@@ -42,12 +58,22 @@
   color: @white;
   text-transform: uppercase;
   background-color: @basic-green;
+
+  &:hover,
+  &:focus {
+    background-color: @basic-green-additional;
+  }
+
+  &:active {
+    color: @white-opacity;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .promo__wrapper {
     .container(tablet);
     min-height: 872px;
+    background-image: none;
   }
 
   .promo__title {
@@ -65,13 +91,24 @@
   .promo__slogan {
     margin-top: 41px;
     margin-left: 88px;
+    font-size: 20px;
+    line-height: 20px;
     text-align: left;
     display: block;
     width: 283px;
     color: @black;
   }
 
+  .promo__picture {
+    z-index: 1;
+    top: 263px;
+  }
+
   .promo__button {
+    position: relative;
+    z-index: 2;
+    font-size: 20px;
+    line-height: 20px;
     margin-left: 88px;
     margin-top: 49px;
     width: 244px;
@@ -83,5 +120,30 @@
   .promo__wrapper {
     .container(desktop);
     min-height: 582px;
+    position: relative;
+
+    &::after {
+      content: "";
+      z-index: 1;
+      position: absolute;
+      top: -120px;
+      right: 0px;
+      width: 720px;
+      height: 694px;
+
+      background-image: url("../img/main-cat-desktop.jpg");
+      background-repeat: no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/main-cat-desktop@2x.jpg");
+        background-size: 720px auto;
+      }
+    }
+  }
+
+  .promo__picture {
+    z-index: 2;
+    top: 32px;
+    left: 558px;
   }
 }

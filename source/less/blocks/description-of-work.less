@@ -1,11 +1,15 @@
+.description-of-work {
+  padding-top: 27px;
+}
+
 .description-of-work__wrapper {
   .container(mobile);
   padding-bottom: 42px;
 }
 
 .description-of-work__title {
-  margin-top: 27px;
   padding-bottom: 14px;
+  margin-top: 0;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -21,6 +25,51 @@
 
 .description-of-work__item {
   margin-top: 26px;
+  position: relative;
+
+  &--nutrients {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: -2px;
+      background-image: url("/img/icon-sheet.svg");
+    }
+  }
+
+  &--powder {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: -2px;
+      background-image: url("/img/icon-powder.svg");
+    }
+  }
+
+  &--eating {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: -2px;
+      background-image: url("/img/icon-eating.svg");
+    }
+  }
+
+  &--time {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: -2px;
+      background-image: url("/img/icon-alarm.svg");
+    }
+  }
 }
 
 .description-of-work__declaration {
@@ -57,7 +106,43 @@
 
   .description-of-work__item {
     margin-top: 32px;
-    padding-bottom: 5px;
+    padding-bottom: 57px;
+
+    &--nutrients {
+      &::before {
+        width: 80px;
+        height: 80px;
+        top: 31px;
+        background-size: 80px auto;
+      }
+    }
+
+    &--powder {
+      &::before {
+        width: 80px;
+        height: 80px;
+        top: 31px;
+        background-size: 80px auto;
+      }
+    }
+
+    &--eating {
+      &::before {
+        width: 80px;
+        height: 80px;
+        top: 31px;
+        background-size: 80px auto;
+      }
+    }
+
+    &--time {
+      &::before {
+        width: 80px;
+        height: 80px;
+        top: 31px;
+        background-size: 80px auto;
+      }
+    }
   }
 
   .description-of-work__declaration {
