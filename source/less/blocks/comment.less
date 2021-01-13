@@ -1,10 +1,22 @@
 .comment__title {
+  display: block;
   margin: 0;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 16px;
+    left: 142px;
+    height: 2px;
+    width: 158px;
+    background-color: @basic-green;
+  }
 }
 
 .comment__text-area {
@@ -29,6 +41,24 @@
   .comment__title {
     font-size: 36px;
     line-height: 36px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 23px;
+      right: 700px;
+      height: 2px;
+      width: 30px;
+      background-color: @basic-green;
+    }
+
+    &::after {
+      top: 23px;
+      left: 216px;
+      height: 2px;
+      width: 478px;
+      background-color: @basic-green;
+    }
   }
 
   .comment__text-area {
@@ -43,6 +73,21 @@
 }
 
 @media (min-width: @desktop-width) {
+  .comment__title {
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      right: 1260px;
+      width: 70px;
+    }
+
+    &::after {
+      left: 222px;
+      width: 1108px;
+    }
+  }
+
   .comment__text-area {
     width: 1201px;
   }

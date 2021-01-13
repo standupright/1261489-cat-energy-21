@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page__body">
@@ -37,7 +37,7 @@
 
   <header class="page-header">
     <div class="page-header__logo-wrapper">
-      <a>
+      <a href="index.html">
         <picture class="page-header__logo">
           <source media="(min-width: 1440px)" srcset="img/main-logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/main-logo-tablet.svg">
@@ -379,28 +379,39 @@
 
   </main>
 
-  <footer class="page-footer page-footer--color">
+  <footer class="page-footer page-footer--bg-color">
     <h2 class="visually-hidden">Как нас найти</h2>
-    <div class="page-footer__map map map--color">
+    <div class="page-footer__map map map--bg-color">
 
-      <div class="map__inner map-plate map-plate--color">
-        <b class="map-plate__slogan">Приглашаем к сотрудничеству дилеров!</b>
-        <address class="map-plate__address">
-          ул. Большая
-          Конюшенная, д. 19/8
-          Санкт-Петербург
-        </address>
+      <div class="map__inner">
+        <div class="map__inner-position map-plate map-plate--bg-color">
+          <b class="map-plate__slogan">Приглашаем к сотрудничеству дилеров!</b>
+          <address class="map-plate__address">
+            ул. Большая
+            Конюшенная, д. 19/8
+            Санкт-Петербург
+          </address>
+        </div>
       </div>
 
-      <picture class="map__picture">
-        <source type="image/webp" media="(min-width: 1440px)" srcset="img/location-desktop.webp 1x, img/location-desktop@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 768px)" srcset="img/location-tablet.webp 1x, img/location-tablet@2x.webp 2x">
-        <source type="image/webp" srcset="img/location-tablet.webp 1x, img/location-tablet@2x.webp 2x">
+      <div class="map__picture-position">
+        <picture class="map__picture">
+          <source type="image/webp" media="(min-width: 1440px)"
+            srcset="img/location-desktop.webp 1x, img/location-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/location-tablet.webp 1x, img/location-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/location-tablet.webp 1x, img/location-tablet@2x.webp 2x">
 
-        <source media="(min-width: 1440px)" srcset="img/location-desktop.jpg 1x, img/location-desktop@2x.jpg 2x">
-        <source media="(min-width: 768px)" srcset="img/location-tablet.jpg 1x, img/location-tablet@2x.jpg 2x">
-        <img src="img/location.jpg" alt="Наша геолокация" srcset="img/location@2x.jpg 2x" width="320" height="362">
-      </picture>
+          <source media="(min-width: 1440px)" srcset="img/location-desktop.jpg 1x, img/location-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/location-tablet.jpg 1x, img/location-tablet@2x.jpg 2x">
+          <img src="img/location.jpg" alt="Наша геолокация" srcset="img/location@2x.jpg 2x" width="320" height="362">
+        </picture>
+
+      </div>
+
+      <iframe class="map__interactive display-hide"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003404!2d30.3208587164867!3d59.93871916905368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1610529659985!5m2!1sru!2sru"
+        height="400" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
     </div>
 
@@ -410,31 +421,29 @@
           <img src="img/logo-name-cat-energy.svg" alt="Логотип Cat Energy" width="128" height="24">
         </a>
 
-        <ul class="page-footer__list">
-          <div class="socials-list">
-            <li>
-              <a class="socials-list__link" href="#">
-                <svg width="23" height="16" class="socials-list__icon" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="#icon-vkontakte"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="socials-list__link" href="#">
-                <svg width="16" height="16" class="socials-list__icon" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="socials-list__link" href="#">
-                <svg width="22" height="22" class="socials-list__icon-facebook" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-          </div>
-        </ul>
+        <ul class="page-footer__list socials-list">
+          <li>
+            <a class="socials-list__link" href="#">
+              <svg width="23" height="16" class="socials-list__icon" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#icon-vkontakte"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="socials-list__link" href="#">
+              <svg width="16" height="16" class="socials-list__icon" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="socials-list__link" href="#">
+              <svg width="22" height="22" class="socials-list__icon-facebook" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+      </ul>
 
         <div class="page-footer__developers developers">
           <a class="developers__link" href="https://htmlacademy.ru/">
@@ -447,7 +456,7 @@
       </div>
     </div>
   </footer>
-  <script src="js/scripts.js"></script>
+  <script src="js/scripts.min.js"></script>
 </body>
 
 </html>

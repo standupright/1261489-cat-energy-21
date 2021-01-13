@@ -12,6 +12,17 @@
   font-size: 24px;
   line-height: 24px;
   color: @black;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 16px;
+    left: 247px;
+    height: 2px;
+    width: 53px;
+    background-color: @basic-green;
+  }
 }
 
 .additional-products__list {
@@ -43,6 +54,24 @@
     line-height: 36px;
     margin-left: 38px;
     padding-bottom: 80px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 23px;
+      right: 708px;
+      height: 2px;
+      width: 30px;
+      background-color: @basic-green;
+    }
+
+    &::after {
+      top: 23px;
+      left: 372px;
+      height: 2px;
+      width: 328px;
+      background-color: @basic-green;
+    }
   }
 
   .additional-products__item {
@@ -64,6 +93,16 @@
   .additional-products__title {
     margin-left: 0;
     padding-bottom: 81px;
+
+    &::before {
+      right: 378px;
+      width: 70px;
+    }
+
+    &::after {
+      left: 372px;
+      width: 957px;
+    }
   }
 
   .additional-products__item {

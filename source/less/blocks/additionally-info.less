@@ -6,6 +6,17 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 16px;
+    left: 165px;
+    height: 2px;
+    width: 136px;
+    background-color: @basic-green;
+  }
 }
 
 .additionally-info__list {
@@ -66,6 +77,24 @@
     margin-bottom: 20px;
     font-size: 36px;
     line-height: 36px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 23px;
+      right: 700px;
+      height: 2px;
+      width: 30px;
+      background-color: @basic-green;
+    }
+
+    &::after {
+      top: 23px;
+      left: 252px;
+      height: 2px;
+      width: 446px;
+      background-color: @basic-green;
+    }
   }
 
   .additionally-info__list {
@@ -101,6 +130,22 @@
 }
 
 @media (min-width: @desktop-width) {
+  .additionally-info__title {
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      right: 1260px;
+      width: 70px;
+    }
+
+    &::after {
+      left: 252px;
+      width: 1078px;
+    }
+  }
+
+
   .additionally-info__list {
     display: grid;
     grid-template-columns: 325px 325px 325px 325px;

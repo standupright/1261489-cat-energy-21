@@ -2,9 +2,14 @@
   background-color: @white;
   position: relative;
 
-  &--color {
+  &--bg-color {
     background-color: @basic-gray;
   }
+}
+
+.map__inner,
+.map__picture-position {
+  .container(mobile);
 }
 
 .map__picture img {
@@ -12,23 +17,38 @@
   margin-left: -20px;
 }
 
+.map__interactive {
+  width: 100%;
+  border: none;
+}
+
 @media (min-width: @tablet-width) {
-   .map__picture img {
+  .map__picture img {
     width: 768px;
     margin-left: -30px;
+  }
+
+  .map__inner,
+  .map__picture-position {
+    .container(tablet);
   }
 }
 
 @media (min-width: @desktop-width) {
-  .map__inner {
+  .map__picture img {
+    width: 1440px;
+    margin-left: -110px;
+  }
+
+  .map__inner,
+  .map__picture-position {
+    .container(desktop);
+  }
+
+  .map__inner-position {
     position: absolute;
     width: 570px;
     height: 201px;
     top: 95px;
-  }
-
-  .map__picture img {
-    width: 1440px;
-    margin-left: -110px;
   }
 }
