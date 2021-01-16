@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page__body">
@@ -79,14 +79,16 @@
         <h2 class="promo__title">Функциональное питание для котов</h2>
         <p class="promo__slogan">Занялся собой? Займись котом!</p>
         <picture class="promo__picture">
-          <source type="image/webp" media="(min-width: 1440px)" srcset="img/main-food-desktop.webp 1x, img/main-food-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/main-food-tablet.webp 1x, img/main-food-tablet@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 1440px)"
+            srcset="img/main-food-desktop.webp 1x, img/main-food-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/main-food-tablet.webp 1x, img/main-food-tablet@2x.webp 2x">
           <source type="image/webp" srcset="img/main-food.webp 1x, img/main-food@2x.webp 2x">
 
           <source media="(min-width: 1440px)" srcset="img/main-food-desktop.png 1x, img/main-food-desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/main-food-tablet.png 1x, img/main-food-tablet@2x.png 2x">
           <img src="img/main-food.png" srcset="img/main-food@2x.png 2x"
-            alt="Внешний вид корма для котов Cat Energy с курицей">
+            alt="Внешний вид корма для котов Cat Energy с курицей" width="280" height="270">
         </picture>
         <a class="promo__button" href="#">Подобрать программу</a>
       </div>
@@ -158,59 +160,88 @@
     </section>
 
     <section class="live-example">
-      <div class="live-example__wrapper">
+      <div class="live-example__title-wrapper">
         <h2 class="live-example__title">Живой пример</h2>
       </div>
+      <div class="live-example__desktop-wrapper-color">
 
-      <div class="live-example__color-wrapper">
-        <div class="live-example__color-inner">
+        <div class="live-example__desktop-wrapper-position">
 
-          <p class="live-example__description">
-            Борис сбросил 5 кг за 2 месяца, просто
-            заменив свой обычный корм на Cat
-            Energy Slim. Отличный результат без
-            изнуряющих тренировок! При этом он не
-            менял своих привычек и по-прежнему
-            спит по 16 часов в день.
-          </p>
+          <div class="live-example__color-wrapper">
+            <div class="live-example__position-wrapper">
+              <p class="live-example__description">
+                Борис сбросил 5 кг за 2 месяца, просто
+                заменив свой обычный корм на Cat
+                Energy Slim. Отличный результат без
+                изнуряющих тренировок! При этом он не
+                менял своих привычек и по-прежнему
+                спит по 16 часов в день.
+              </p>
 
-          <div class="live-example__achievements-inner">
-            <ul class="live-example__list">
-              <li class="live-example__item live-achievements">
-                <b class="live-achievements__title">5 кг</b>
-                <div class="live-achievements__inner">
-                  <p class="live-achievements__description">снижение веса</p>
+              <div class="live-example__achievements-inner">
+                <ul class="live-example__list">
+                  <li class="live-example__item live-achievements">
+                    <b class="live-achievements__title">5 кг</b>
+                    <div class="live-achievements__inner">
+                      <p class="live-achievements__description">снижение веса</p>
+                    </div>
+                  </li>
+                  <li class="live-example__item live-achievements">
+                    <b class="live-achievements__title">60 дней</b>
+                    <div class="live-achievements__inner">
+                      <p class="live-achievements__description">затрачено времени</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="live-example__expenses-inner live-expenses">
+                  <span class="live-expenses__name">
+                    Затраты на питание:
+                  </span>
+                  <span class="live-expenses__cost">
+                    15 000 руб.
+                  </span>
                 </div>
-              </li>
-              <li class="live-example__item live-achievements">
-                <b class="live-achievements__title">60 дней</b>
-                <div class="live-achievements__inner">
-                  <p class="live-achievements__description">затрачено времени</p>
-                </div>
-              </li>
-            </ul>
-            <div class="live-example__expenses-inner live-expenses">
-              <span class="live-expenses__name">
-                Затраты на питание:
-              </span>
-              <span class="live-expenses__cost">
-                15 000 руб.
-              </span>
+              </div>
             </div>
           </div>
 
           <div class="live-example__visual-change visual-change">
-            <img src="#" alt="Фото котика Бориса">
-            <div class="visual-change__wrapper">
-              Было
-              <div class="visual-change__toggle">
-                <!-- тут будут необходимые дивы для полоски -->
+            <div class="visual-change__position-wrapper">
+              <picture class="visual-change__fat-cat ">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/cat-fat.webp 1x, img/cat-fat@2x.webp 2x">
+                <source type="image/webp" srcset="img/cat-before.webp 1x, img/cat-before@2x.webp 2x">
+
+                <source media="(min-width: 768px)" srcset="img/cat-fat.png 1x, img/cat-fat2x.png 2x">
+                <img src="img/cat-before.png" srcset="img/cat-before@2x.png 2x"
+                  alt="Внешний вид корма для котов Cat Energy с курицей" width="311" height="232">
+              </picture>
+
+              <picture class="visual-change__skinny-cat display-hide">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/cat-skinny.webp 1x, img/cat-skinny@2x.webp 2x">
+                <source type="image/webp" srcset="img/cat-after.webp 1x, img/cat-after@2x.webp 2x">
+
+                <source media="(min-width: 768px)" srcset="img/cat-skinny.png 1x, img/cat-skinny@2x.png 2x">
+                <img src="img/cat-after.png" srcset="img/cat-after@2x.png 2x"
+                  alt="Внешний вид корма для котов Cat Energy с курицей" width="251" height="240">
+              </picture>
+
+              <div class="visual-change__wrapper">
+                <button class="visual-change__button-before">Было</button>
+
+                <div class="visual-change__toggle">
+                  <div class="visual-change__inside-bar"></div>
+                </div>
+                <button class="visual-change__button-after">Стало</button>
               </div>
-              Стало
             </div>
           </div>
         </div>
       </div>
+
+
+
     </section>
   </main>
 
@@ -218,35 +249,45 @@
     <h2 class="visually-hidden">Как нас найти</h2>
     <div class="page-footer__map map">
 
-      <div class="map__inner map-plate">
-        <b class="map-plate__slogan">Приглашаем к сотрудничеству дилеров!</b>
-        <address class="map-plate__address">
-          ул. Большая
-          Конюшенная, д. 19/8
-          Санкт-Петербург
-        </address>
+      <div class="map__inner">
+        <div class="map__inner-position map-plate">
+          <b class="map-plate__slogan">Приглашаем к сотрудничеству дилеров!</b>
+          <address class="map-plate__address">
+            ул. Большая
+            Конюшенная, д. 19/8
+            Санкт-Петербург
+          </address>
+        </div>
       </div>
 
-      <picture class="map__picture">
-        <source type="image/webp" media="(min-width: 1440px)" srcset="img/location-desktop.webp 1x, img/location-desktop@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 768px)" srcset="img/location-tablet.webp 1x, img/location-tablet@2x.webp 2x">
-        <source type="image/webp" srcset="img/location-tablet.webp 1x, img/location-tablet@2x.webp 2x">
+      <div class="map__picture-position">
+        <picture class="map__picture">
+          <source type="image/webp" media="(min-width: 1440px)"
+            srcset="img/location-desktop.webp 1x, img/location-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/location-tablet.webp 1x, img/location-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/location-tablet.webp 1x, img/location-tablet@2x.webp 2x">
 
-        <source media="(min-width: 1440px)" srcset="img/location-desktop.jpg 1x, img/location-desktop@2x.jpg 2x">
-        <source media="(min-width: 768px)" srcset="img/location-tablet.jpg 1x, img/location-tablet@2x.jpg 2x">
-        <img src="img/location.jpg" alt="Наша геолокация" srcset="img/location@2x.jpg 2x" width="320" height="362">
-      </picture>
+          <source media="(min-width: 1440px)" srcset="img/location-desktop.jpg 1x, img/location-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/location-tablet.jpg 1x, img/location-tablet@2x.jpg 2x">
+          <img src="img/location.jpg" alt="Наша геолокация" srcset="img/location@2x.jpg 2x" width="320" height="362">
+        </picture>
+
+      </div>
+
+      <iframe class="map__interactive display-hide"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003404!2d30.3208587164867!3d59.93871916905368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1610529659985!5m2!1sru!2sru"
+        height="400" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
     </div>
 
     <div class="page-footer__color-wrapper">
       <div class="page-footer__wrapper">
-        <a class="page-footer__logo" href="">
+        <a class="page-footer__logo" href="index.html">
           <img src="img/logo-name-cat-energy.svg" alt="Логотип Cat Energy" width="128" height="24">
         </a>
 
-        <ul class="page-footer__list">
-          <div class="socials-list">
+        <ul class="page-footer__list socials-list">
             <li>
               <a class="socials-list__link" href="#">
                 <svg width="23" height="16" class="socials-list__icon" xmlns="http://www.w3.org/2000/svg">
@@ -268,7 +309,6 @@
                 </svg>
               </a>
             </li>
-          </div>
         </ul>
 
         <div class="page-footer__developers developers">
@@ -282,7 +322,7 @@
       </div>
     </div>
   </footer>
-  <script src="js/scripts.js"></script>
+  <script src="js/scripts.min.js"></script>
 </body>
 
 </html>

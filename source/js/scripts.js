@@ -1,5 +1,12 @@
-var nav = document.querySelector('.nav');
-var navToggle = document.querySelector('.nav__toggle');
+const nav = document.querySelector('.nav');
+const navToggle = document.querySelector('.nav__toggle');
+
+const mapPicture = document.querySelector(".map__picture");
+const mapInteractive = document.querySelector(".map__interactive");
+
+// map without js
+mapInteractive.classList.remove("display-hide");
+mapPicture.classList.add("display-hide");
 
 // nav open and closed
 nav.classList.remove('nav--nojs');

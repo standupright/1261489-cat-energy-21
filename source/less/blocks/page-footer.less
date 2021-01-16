@@ -1,12 +1,11 @@
 .page-footer {
   background-color: @white;
 
-  &--color {
+  &--bg-color {
     background-color: @basic-gray;
   }
 }
 
-.page-footer__map,
 .page-footer__wrapper {
   .container(mobile);
 }
@@ -40,8 +39,6 @@
 .page-footer__list {
   height: 64px;
   margin: 0;
-  padding-left: 73px;
-  padding-right: 73px;
   padding-top: 20px;
   padding-bottom: 21px;
   border-top: 1px solid @dark-gray;
@@ -49,12 +46,8 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-footer__map,
   .page-footer__wrapper {
     .container(tablet);
-  }
-
-  .page-footer__wrapper {
     display: flex;
     justify-content: space-between;
     padding-top: 55px;
@@ -70,17 +63,11 @@
     padding: 0;
     border: 0;
   }
-
-
 }
 
 @media (min-width: @desktop-width) {
-  .page-footer__map,
   .page-footer__wrapper {
     .container(desktop);
-  }
-
-  .page-footer__wrapper {
     display: flex;
     justify-content: space-between;
     padding-top: 55px;

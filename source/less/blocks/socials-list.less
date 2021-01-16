@@ -2,9 +2,10 @@
   list-style: none;
   padding: 0;
   display: flex;
-  width: 130px;
   justify-content: space-between;
   align-items: center;
+  padding-left: 73px;
+  padding-right: 73px;
 }
 
 .socials-list__link {
@@ -50,4 +51,13 @@
 .socials-list__fb {
   width: 28px;
   height: 33px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .socials-list {
+    padding: 0;
+    width: 130px;
+    height: 34px;
+  }
 }
