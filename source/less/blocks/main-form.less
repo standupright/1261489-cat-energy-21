@@ -1,3 +1,11 @@
+.main-form {
+  overflow: hidden;
+}
+
+.main-form__wrapper {
+  .container(mobile);
+}
+
 .main-form__weight-change {
   margin: 0;
   padding-top: 27px;
@@ -40,6 +48,12 @@
 
 
 @media (min-width: @tablet-width) {
+  .main-form__wrapper {
+    .container(tablet);
+    padding-left: 71px;
+    padding-right: 67px;
+  }
+
   .main-form__weight-change {
     margin-top: 72px;
     margin-left: 0;
@@ -69,6 +83,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .main-form__wrapper {
+    .container(desktop);
+  }
+
   .main-form__info-cat-wrapper {
     display: flex;
   }
