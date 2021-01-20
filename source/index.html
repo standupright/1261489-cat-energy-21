@@ -10,7 +10,7 @@
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
 </head>
 
-<body class="page__body">
+<body>
   <svg style="display: none">
     <!-- Vk icon -->
     <symbol viewBox="0 0 23 16" id="icon-vkontakte">
@@ -49,9 +49,7 @@
     </div>
 
     <nav class="nav nav--closed nav--nojs">
-      <button class="nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
+      <button class="nav__toggle" type="button" aria-label="Открыть меню"></button>
 
       <ul class="nav__list">
         <li class="nav__item">
@@ -233,7 +231,7 @@
                 <button class="visual-change__button-before">Было</button>
 
                 <div class="visual-change__toggle">
-                  <div class="visual-change__inside-bar"></div>
+                  <div class="visual-change__inside-bar" aria-label="Полузнок"></div>
                 </div>
                 <button class="visual-change__button-after">Стало</button>
               </div>
@@ -292,21 +290,24 @@
         <ul class="page-footer__list socials-list">
             <li>
               <a class="socials-list__link" href="#">
-                <svg width="23" height="16" class="socials-list__icon" xmlns="http://www.w3.org/2000/svg">
+                <svg width="23" height="16" class="socials-list__icon" xmlns="http://www.w3.org/2000/svg" aria-labelledby="heading">
+                  <title id="heading">Мы во Вконтакте</title>
                   <use xlink:href="#icon-vkontakte"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a class="socials-list__link" href="#">
-                <svg width="16" height="16" class="socials-list__icon" xmlns="http://www.w3.org/2000/svg">
+                <svg width="16" height="16" class="socials-list__icon" xmlns="http://www.w3.org/2000/svg" aria-labelledby="heading">
+                  <title id="heading">Мы в Инстаграме</title>
                   <use xlink:href="#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a class="socials-list__link" href="#">
-                <svg width="22" height="22" class="socials-list__icon-facebook" xmlns="http://www.w3.org/2000/svg">
+                <svg width="22" height="22" class="socials-list__icon-facebook" xmlns="http://www.w3.org/2000/svg" aria-labelledby="heading">
+                  <title id="heading">Мы в Фейсбуке</title>
                   <use xlink:href="#icon-facebook"></use>
                 </svg>
               </a>

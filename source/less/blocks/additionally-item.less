@@ -35,6 +35,13 @@
   opacity: 0.3;
 }
 
+.additionally-item__checkbox:hover + .additionally-item__label,
+.additionally-item__checkbox:focus + .additionally-item__label {
+  &::before {
+    border: 1px solid @special-gray-darken;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .additionally-item__label {
     font-size: 20px;
